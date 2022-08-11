@@ -9,7 +9,7 @@ const restart = document.getElementById("restart");
 let questions = [
     {
         id: 1,
-        question:`<h1>What is the te form for <fg t="い">行</fg>く?</h1>`,
+        question: `<h1>What is the te form for <fg t="い">行</fg>く?</h1>`,
         a: "って",
         b: "て",
         c: "いて",
@@ -108,7 +108,7 @@ let acceptingAnswers;
 //     xhr.onload=function () {
 //         if(this.status == 200) {
 //             //console.log(this.response)
-            
+
 //         } else {
 //             console.log("Opps, something went wrong");
 //         }
@@ -124,7 +124,7 @@ const startGame = () => {
     questionCounter = 0;
     score = 0;
     acceptingAnswers = true;
-    scoreText.innerHTML = score;
+    scoreText.innerText = score;
 
     availableQuestions = getRandomQuestions(questions, MAX_QUESTIONS);
 
@@ -180,6 +180,7 @@ const getNewQuestion = () => {
 
             if (answeredLetter === currentQuestion.answer) {
                 score++;
+                scoreText.innerText= score;
                 classToApply = "correct";
             }
 
@@ -195,14 +196,13 @@ const getNewQuestion = () => {
     });
 
     availableQuestions.shift();
-    // getNewQuestion();
 };
 
 const displayResults = () => {
     const endGameModal = document.getElementById('endGame');
     const modal = new mdb.Modal(endGameModal);
     const modalBody = document.getElementById("modal-body");
-    modalBody.innerText = `You scored: ${score}`; 
+    modalBody.innerText = `You scored: ${score}`;
     modal.show();
     acceptingAnswers = false;
 }
