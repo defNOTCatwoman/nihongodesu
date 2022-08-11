@@ -1,0 +1,105 @@
+body,
+h1 {
+    font-weight: 300;
+    background-color: #eee;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+#title{
+    font-size: 4em;
+    font-weight: 700;
+    color: #0D1973;
+}
+
+.game-container {
+    display:flex;
+    justify-content: center;
+    align-self: center;
+}
+
+#intro {
+    display: flex;
+    justify-content: space-between;
+}
+
+.prefix {
+    text-align: center;
+    font-size: 1rem;
+}
+
+#counter,
+#score {
+    text-align: center;
+}
+
+#question {
+    
+}
+
+.question-holder {
+    height: 8em;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.answer-container {
+    display: flex;
+    flex-direction: initial;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.answer-prefix {
+    background-color: #434757
+    ;
+    color: white;
+    padding: 1.5rem 2.5rem;
+    margin: 0;
+}
+
+.answer-text {
+    padding: 1.5rem;
+    width: 100%;
+    margin: 0;
+}
+
+.answer-container:hover {
+    cursor: pointer;
+    box-shadow: 4px 5px 6px -1px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 4px 5px 6px -1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 4px 5px 6px -1px rgba(0, 0, 0, 0.25);
+    transform: translateY(-0.1rem);
+    transition: transform 200ms;
+}
+
+.correct {
+    background-color: #00BEAE;
+    color: white;
+}
+
+.incorrect {
+    background-color: #F49A20;
+    color: white;
+}
+
+fg:before {
+	content: attr(t);
+	display: block;
+    font-size: 50%;
+    text-align: start;
+	line-height: 1.5;
+}
+
+fg {
+	display: inline-block;
+	text-indent: 7px;
+	line-height: normal;
+    -webkit-text-emphasis: none;
+	text-align: center;
+	line-height: 1;
+}
